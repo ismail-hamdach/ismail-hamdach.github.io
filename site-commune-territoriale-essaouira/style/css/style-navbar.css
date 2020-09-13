@@ -1,0 +1,138 @@
+*{
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+nav{
+    background-color: #011627;
+    height: 80px;
+    width: 100%;
+    border-bottom: grey solid  0.1px;
+   
+}
+
+label.logo img{
+    padding: 0 50px;
+    margin-top: 8px;
+    
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: grey;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius:  3px;
+    padding: 7px 13px;
+}
+
+.nav-link{
+    display: initial;
+    
+}
+
+a:hover{
+    background-color: grey;
+    color: white;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+        padding-left: 50px;
+    }
+
+    nav{
+        border: none;
+    }
+
+    nav .logo img{
+        padding: 0 ;
+        max-width: 50px;
+        height: 50px;
+    }
+
+    nav ul li a{
+        font-size: 16px;
+    }
+
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        
+
+    }
+
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+       
+    }
+
+    nav ul li a{
+        color: white;
+        font-size: 20px;
+    }
+
+    .dropdown-item nav ul li a:hover{
+        background: none;
+        color: #0082e6;
+    }
+
+    #check:checked ~ ul{
+        left: 0;
+    }
+
+    .dropdown-menu{
+        background-color: #2c3e50 ;
+    }
+
+    .dropdown-item{
+        color: white;
+    }
+}
