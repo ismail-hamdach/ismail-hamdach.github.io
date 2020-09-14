@@ -1,0 +1,10 @@
+<script src="../style/js/script.js"></script>
+
+
+<div class="container1">
+        <div class = "spinar">
+        </div>
+</div>
+
+
+<link rel="stylesheet" href="../style/css/style-load.css">
