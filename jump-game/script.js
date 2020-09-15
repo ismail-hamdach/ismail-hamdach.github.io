@@ -48,7 +48,7 @@ setInterval(function() {
         score.innerHTML = 0;
         s = 2;
         i = 10;
-        d = 0.008;
+        d = 0.01;
 
     }else{
 
