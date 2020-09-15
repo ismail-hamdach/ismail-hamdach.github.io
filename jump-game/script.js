@@ -58,7 +58,7 @@ setInterval(function() {
              d *= 2;
              s -= d;
              i *= 2;
-             block.style.animation = "block infinite linear "+s+"s";
+             setTimeout(function(){block.style.animation = "block infinite linear "+s+"s";}, 100)
          }
     }
 }, 50);
