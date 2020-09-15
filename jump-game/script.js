@@ -22,8 +22,8 @@ function jump(){
 }
 
 function start(){
-        body.removeEventListener("click", function(){start()})
-        body.addEventListener("click", function(){jump()});
+        body.removeAttribute("onclick");
+        body.setAttribute("onclick", "jump()");
         gameOver.style.display = "none";
         body.classList.remove("darkmode");
         block.style.display = "flex";
@@ -37,18 +37,18 @@ setInterval(function() {
     
     if(blockLeft<40 && blockLeft>20 && charactereTop>=130){
 
-        body.removeEventListener("click", function(){jump()});
+        body.removeAttribute("onclick");
         block.style.animation = "none";
         block.style.display = "none";
         chara.style.display = "none";
         body.classList.toggle("darkmode");
         gameOver.style.display = "block";
         document.querySelector("#score-nbr").innerHTML = score.innerHTML;
-        body.addEventListener("click", function(){start()});
+        body.setAttribute("onclick", "start()");
         score.innerHTML = 0;
         s = 2;
         i = 10;
-        d = 0.01;
+        d = 1;
 
     }else{
 
@@ -63,4 +63,4 @@ setInterval(function() {
     }
 }, 50);
 
-body.addEventListener("click", function(){start()});
+body.setAttribute("onclick", "start()");
