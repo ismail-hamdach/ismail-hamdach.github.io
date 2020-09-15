@@ -55,8 +55,7 @@ body{
     border-radius: 2px;
     position: relative;
     top: 130px;
-    left: 480px;
-    animation: block infinite linear;
+    left: 450px;
     animation-duration: 2s;
 }
 
