@@ -1,4 +1,5 @@
-const content = document.querySelector("#content");
+const content   = document.querySelector("#content");
+const container = document.querySelector("#container0");
 
 const conf  = document.querySelector("#nb-conf");
 const activ = document.querySelector("#nb-activ");
@@ -15,6 +16,17 @@ const deathToday = document.querySelector("#nb-death-today");
 const activPerc = document.querySelector("#perc-activ");
 const recoPerc  = document.querySelector("#perc-reco");
 const deathPerc = document.querySelector("#perc-death");
+
+let winWidth = window.innerWidth;
+
+if( winWidth < 1140 ){
+    if( winWidth < 414 ){
+        container.style.width = 300 + "px"
+    }
+    else{
+        container.style.width = (winWidth - 200) + "px"
+    }
+}
 
 let httpReq = new XMLHttpRequest()
   
