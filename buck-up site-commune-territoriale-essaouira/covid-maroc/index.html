@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>covid-19 Maroc</title>
+</head>
+<body>
+
+    <div id="container0">
+        
+        <nav>
+            <img id = "logo-covid19" src="img/covid-logo.png" alt="logo-covid19-maroc">
+            <a href="../index.html"> <img id = "logo-commun" src="img/logo commune.png" alt="logo-communale-essaouira"></a>
+        </nav>
+
+        <section>
+
+            <h1>Maroc</h1>
+
+            <div id="container1">
+                
+<!--                                                    card-start : confirmed                                                 -->
+                <div id="confirmed" class="card">
+
+                    <div class="card-row">
+                        <div class="col-7">
+                            <h4>cas Confirmés</h4>
+                            <h5 id="nb-conf">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <div class="icon">
+                                <img src="img/confirmed.png" alt="icon-confirmed">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="col-7">
+                            <h5 id="nb-conf-today">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <p>Mise a jour <span id="mise-ajour">00/00/0000</span></p>
+                        </div>
+                    </div>
+                    
+                </div>
+<!--                                                    card-end : confirmed                                                 -->
+
+<!--                                                    card-start : active                                                 -->
+                <div id="active" class="card">
+                    <div class="card-row">
+                        <div class="col-7">
+                            <h4>cas Active</h4>
+                            <h5 id="nb-activ">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <div class="icon">
+                                <img src="img/active.png" alt="icon-active">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="col-7">
+                            <h5 id="nb-activ-today">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <p><span id="perc-activ">00.0</span>%</p>
+                        </div>
+                    </div>
+                </div>
+<!--                                                    card-end  : active                                                  -->
+<!--                                                    card-start  : recovred                                                -->
+                <div id="recovered" class="card">
+                    <div class="card-row">
+                        <div class="col-7">
+                            <h4>cas Géris</h4>
+                            <h5 id="nb-reco">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <div class="icon">
+                                <img src="img/recovred.png" alt="icon-reco">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="col-7">
+                            <h5 id="nb-reco-today">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <p><span id="perc-reco">00.0</span>%</p>
+                        </div>
+                    </div>
+                </div>
+
+<!--                                                    card-end  : recovred                                                  -->
+
+<!--                                                    card-start   : deaths                                               -->
+
+                <div id="deaths" class="card">
+                    <div class="card-row">
+                        <div class="col-7">
+                            <h4>cas Décés</h4>
+                            <h5 id="nb-death">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <div class="icon">
+                                <img src="img/death.png" alt="icon-death">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer">
+                        <div class="col-7">
+                            <h5 id="nb-death-today">0</h5>
+                        </div>
+                        <div class="col-5">
+                            <p><span id="perc-death">00.0</span>%</p>
+                        </div>
+                    </div>
+                </div>
+<!--                                                    card-end  : deaths                                                  -->
+            </div>
+
+
+            <div id="container">
+                <h2></h2>
+                <div id = "content">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <footer>
+            <h4>2020 © By I.Hamdach</h4>
+        </footer>
+
+    </div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="script.js"></script>
+
+</html>
