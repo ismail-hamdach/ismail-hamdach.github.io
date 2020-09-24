@@ -2,73 +2,67 @@
 
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="style/js/a076d05399.js"></script>
-    <link rel="stylesheet" href="style/css/bootstrap.min.css">
-    <script src="style/js/jquery.min.js"></script>
-    <script src="style/js/popper.min.js"></script>
-    <script src="style/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="style/css/style-navbar.css">
-    <link rel="stylesheet" href="style/css/style-body.css">
-
-    <title>commune territoriale ville d'essaouira</title>
-
-    <style>
-        .container span{
-            font-size: large;
-            color: darkgreen;
-        }
-
-        .container-label{
-            text-align: center; margin-bottom: 40px;
-        }
-
-        .container-label h1{
-            margin-bottom: 20px;
-        }
-
-       
-
-        
-    </style>
-
-</head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style/style.css">
+        <title>EssaouiraCity-a propos</title>
+    
+    </head>
 
 <body>
 
-<nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <label class="logo"><img src="images/logo.png" alt="logo"></label>
-        <ul>
-            <li><a href="./index.html">accueil</a></li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" >services communal</a>
-                <div class="dropdown-menu">
-                  <a class="dropdown-item" href="pages/RH.html">Département du développement des ressources humaines</a>
-                  <a class="dropdown-item" href="pages/DT.html">Département de traitement</a>
-                  <a class="dropdown-item" href="pages/DAES.html">Département des affaires économiques et sociales</a>
-                  <a class="dropdown-item" href="pages/DPS.html">Département Prévention et Santé</a>
-                  <a class="dropdown-item" href="pages/TU.html">Département des transports urbains</a>
-                  <a class="dropdown-item" href="pages/SP.html">Section de propriété</a>
-                  <a class="dropdown-item" href="pages/DC.html">Département de construction</a>
-                  <a class="dropdown-item" href="pages/DMG.html">Département de maintenance générale</a>
-                  <a class="dropdown-item" href="pages/DEDD.html">Département de l'environnement et du développement durable</a>
-                  <a class="dropdown-item" href="pages/DJEC.html">Département juridique et de l'état civil</a>
-                  <a class="dropdown-item" href="pages/DRF.html">Département des ressources financières</a>
-                  <a class="dropdown-item" href="pages/DBC.html">Département du budget et des comptes</a>
-                </div>
-              </li>
-            <li><a href="./covid-maroc/index.html">covid19 maroc Tracker</a></li>
-            <li><a href="./presedent.html">mot de president</a></li>
-            <li><a href="./about.html">a propos</a></li>
-            <li><a href="#contact">contact</a></li>
-        </ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top" >
+        
+        <div class="container-fluid">
+    
+            <div class="navbar-header">
+    
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                     
+            </div>
+            
+    
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="navbar-nav nav">
+                    <li ><a href="./index.html"><span class="glyphicon glyphicon-home"></span>  </a></li>
+                </ul>
+    
+                <ul class="nav navbar-nav navbar-right">
+                
+                    <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">SERVICES COMMUNAL <span class="caret"></span> </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="pages/RH.html">Ressources Humaines</a></li>
+                                    <li><a class="dropdown-item" href="pages/DT.html">Traitement</a></li>
+                                    <li><a class="dropdown-item" href="pages/DAES.html">Affaires économiques et sociales</a></li>
+                                    <li><a class="dropdown-item" href="pages/DPS.html">Prévention et Santé</a></li>
+                                    <li><a class="dropdown-item" href="pages/TU.html">Transports Urbains</a></li>
+                                    <li><a class="dropdown-item" href="pages/SP.html">Section de Propriété</a></li>
+                                    <li><a class="dropdown-item" href="pages/DC.html">Construction</a></li>
+                                    <li><a class="dropdown-item" href="pages/DMG.html">Maintenance Générale</a></li>
+                                    <li><a class="dropdown-item" href="pages/DEDD.html">Environnement et Développement Durable</a></li>
+                                    <li><a class="dropdown-item" href="pages/DJEC.html">Juridique et l'état civil</a></li>
+                                    <li><a class="dropdown-item" href="pages/DRF.html">Ressources Financières</a></li>
+                                    <li><a class="dropdown-item" href="pages/DBC.html">Budget et Comptes</a></li>
+                                </ul>
+                    </li>
+                    <li><a id="hello" href="./covid-maroc/index.html">COVID-19 MAROC TRACKER</a></li>
+                    <li ><a href="./presedent.html">MOT DE PRISEDENT</a></li>
+                    <li class="active"><a href="./about.html">A PROPOS</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+           
+            </div>
+    
+        </div>
+    
     </nav>
 
     <div style="height: 40px;"></div>
@@ -77,9 +71,15 @@
 
         
 
-        <div class="container-label"  >
-            <h1>A propos commune territoriale ville d'essaouira</h1>
-            <img  src="images/logo commune.png" alt="logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="title">A PROPOS COMMUNE TERRITORIALE VILLE D'ESSAOUIRA</h1>
+                </div>
+                <div class="col-md-12 img-cent">
+                    <img  class="img-responsive" src="images/logo commune.png" alt="logo">
+                </div>
+            </div>
         </div>
 
         <p>
@@ -113,20 +113,22 @@
 
     </div>
 
-     <div id="contact" style="background-color:#011627; padding: 30px; margin-top: 50px ; font-size: 24px ; color: #fdfffc ;">
-            <div class="container">
-                <p >
-                    Contactez nous</br>
-                    <div></div>
-                    Conseil Communal d'essaouira</br>
-                    adresse:</br>
-                    téléphone:</br>
-                    Email: conseilmunicipalessaouira@gmail.com  </br></br>
-                </p>
-                <div style="text-align: center; font-size: 29; color: #9e9e9e;">
-                    <p>Tous droits réservés © Conseil Communal d'Essaouira</p>
-                </div>
-            </div>
+    <div class="container-fluid footer" id="contact">
+        <div class="container">
+          <h4>
+            Contactez nous : 
+            Conseil Communal d'essaouira <br><br>
+            adresse: <br>
+            téléphone: <br>
+            Email: conseilmunicipalessaouira@gmail.com <br>
+        </h4>
+        <h3>
+            Tous droits réservés © Conseil Communal d'Essaouira
+        </h3>
         </div>
+      </div>
 
 </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+</html>
