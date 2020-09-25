@@ -8,6 +8,15 @@
     font-weight: bold;
 }
 
+.navbar-inverse{
+    background-color: #011627;
+    padding: 5px;
+}
+
+.dropdown-menu .active a, .dropdown-menu .active a:hover{
+    background-color: #011627;
+}
+
 .container{
     margin-top:50px;
     margin-bottom:50px;
