@@ -1,5 +1,4 @@
 const content   = document.querySelector("#content");
-const container = document.querySelector("#container0");
 
 const conf  = document.querySelector("#nb-conf");
 const activ = document.querySelector("#nb-activ");
@@ -17,16 +16,6 @@ const activPerc = document.querySelector("#perc-activ");
 const recoPerc  = document.querySelector("#perc-reco");
 const deathPerc = document.querySelector("#perc-death");
 
-let winWidth = window.innerWidth;
-
-if( winWidth < 1140 ){
-    if( winWidth < 414 ){
-        container.style.width = 300 + "px"
-    }
-    else{
-        container.style.width = (winWidth - 200) + "px"
-    }
-}
 
 let httpReq = new XMLHttpRequest()
   
@@ -40,10 +29,10 @@ httpReq.onreadystatechange = function(){
         let deaths    = resp.map(e=> e.Deaths)
         let active    = resp.map(e=> e.Active)
         let lbl       = resp.map(e=>`${new Date(e.Date).getDate()}/${new Date(e.Date).getMonth()+1}`)
-        let DateLbl   = resp.map(e => `${new Date(e.Date).getDate()}/${new Date(e.Date).getMonth()+1}/${new Date(e.Date).getFullYear()}`)
+        let DateLbl   = resp.map(e => `${valider(new Date(e.Date).getDate())}/${valider(new Date(e.Date).getMonth()+1)}/${new Date(e.Date).getFullYear()} ${valider(new Date(e.Date).getHours())}:${valider(new Date(e.Date).getMinutes())}`)
         creatChart(content,"Maroc",lbl,confirmed,active, recovered,deaths)
         
-        today.innerHTML = DateLbl[DateLbl.length-1];  
+        today.innerHTML = "Mise a jour : " + DateLbl[DateLbl.length-1];  
 
         conf.innerHTML  = confirmed[confirmed.length-1];
         activ.innerHTML = active[active.length-1];
@@ -55,9 +44,9 @@ httpReq.onreadystatechange = function(){
         recoToday.innerHTML  = "+ "+(recovered[recovered.length-1]-recovered[recovered.length-2]);
         deathToday.innerHTML = "+ "+(deaths[deaths.length-1]-deaths[deaths.length-2]);  
 
-        activPerc.innerHTML = Math.round((activ.innerHTML/conf.innerHTML)*10000)/100;
-        recoPerc.innerHTML  = Math.round((reco.innerHTML/conf.innerHTML)*10000)/100;
-        deathPerc.innerHTML = Math.round((death.innerHTML/conf.innerHTML)*10000)/100;
+        activPerc.innerHTML = (Math.round((activ.innerHTML/conf.innerHTML)*10000)/100) + "%";
+        recoPerc.innerHTML  = (Math.round((reco.innerHTML/conf.innerHTML)*10000)/100)  + "%";
+        deathPerc.innerHTML = (Math.round((death.innerHTML/conf.innerHTML)*10000)/100) + "%";
         
     }
 }
@@ -115,5 +104,12 @@ httpReq.send()
             }
     
         });
+    }
+
+    function valider(nbr){
+        if(nbr<10){
+            nbr = "0"+nbr;
+        }
+        return nbr;
     }
 

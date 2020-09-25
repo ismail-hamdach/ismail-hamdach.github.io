@@ -1,0 +1,160 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 0;
+    padding: 0;
+    color: #8a98ac;
+    background-color: #f2f5fa;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#container0{
+    padding-top: 25px;
+    width: 1140px;
+}
+
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+#logo-covid19{
+    max-height: 55px;
+    max-width: auto;
+}
+
+#logo-commun{
+    max-height: 55px;
+    max-width: auto;
+}
+
+section{
+    padding: 8px;
+}
+
+#container1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 15px;
+    width: 47%;
+    border: 0px #fff solid;
+    border-radius: 5px;
+    background-color:#fff;
+    /*height: 156.3px;*/
+    box-shadow: 2px 10px 5px rgba(138, 152, 172, 0.1);
+}
+
+
+.card-row, .card-footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.card-row .col-7 h4{
+    width: 150px;
+    margin-left: 30px;
+}
+
+#confirmed .card-row .col-7 h4{
+    width: 150px;
+    margin-left: 20px;
+}
+
+.card-row .col-7 h5{
+    width: 100px;
+    margin-left: 50px;
+}
+
+.card-footer h5{
+    margin: 5px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 100px;
+    margin-left: 50px;
+    border-radius: 2px;
+}
+
+.col-5 p{
+    margin: 5px;
+}
+
+#nb-conf-today{
+    background-color: #ffc93c;
+    color: #f2f5fa;
+}
+#nb-activ-today{
+    background-color:rgba(254, 191, 99, 1);
+    color: #f2f5fa;
+}
+#nb-reco-today{
+    background-color: #81b214;
+    color: #f2f5fa;
+}
+#nb-death-today{
+    background-color: rgba(205, 10, 10, 1);
+    color: #f2f5fa;
+}
+
+.card-footer{
+    border-top: rgba(138, 152, 172, 0.1) 1px solid;
+}
+
+.col-7{
+    width: 58.33%;
+}
+
+.col-5{
+    width: 41.6%;
+}
+
+.col-5 img{
+    padding: 20px 0px 20px 0px;
+}
+
+
+.icon img{
+    max-width: 50px;
+    max-height: auto;
+}
+/*chart style*/
+#container{
+    background-color: #fff;
+    margin-bottom: 20px;
+    border: 0px #fff solid;
+    border-radius: 5px;
+    box-shadow: 2px 10px 5px rgba(138, 152, 172, 0.1);
+}
+
+#content{
+    border: rgba(138, 152, 172, 0.2) 1px solid;
+    border-radius: 5px;
+    padding: 5px;
+    overflow: auto;
+    /*width: 100%;*/
+    padding: 5px;
+}
+/*end-chart style*/
+footer{
+    padding: 20px;
+    background-color: #30475e;
+}
