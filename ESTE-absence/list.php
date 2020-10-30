@@ -3,7 +3,17 @@
         if(isset($_POST['filiere']) AND isset($_POST['semistre'])){
             $bdd = new PDO('mysql:host=localhost;dbname=pfs','root','');
             $request = $bdd->prepare('SELECT id, nom, prenom FROM `etudiant` WHERE semistre = ? AND filiere = ?');
-            $request->execute(array($_POST['semistre'],$_POST['filiere']));
+            $filiere = $_POST['filiere'];
+            $sem = $_POST['semistre'];
+            $request->execute(array($sem,$filiere));
+            switch($_POST['filiere']){
+                    case 'IDSD' : $fi='Informatique Décisionnelle et Science de Données' ;break;
+                    case 'GI' : $fi='Génie Informatique ' ;break;
+                    case 'ER' : $fi='Energies Renouvelables ' ;break;
+                    case 'TM' : $fi='Techniques de Management ' ;break;
+                    case 'GODT' : $fi='Gestion des Organisations et des Destinations Touristiques ' ;break;
+                    case 'GE' : $fi="Génie de l'Environnement" ;break;
+            }
     ?>
     
     <title>liste des etudiants</title>
@@ -25,7 +35,7 @@
                 
             </div>
             <div class="col-lg-12">
-                <h2>Liste des etudiants de genie informatique : s1</h2>
+                <?php> echo "<h2>Liste des etudiants de" .$fi." : s".$sem."</h2>";?>
             </div>
             <!--table-->
                 <div class="table-responsive col-lg-12">          
