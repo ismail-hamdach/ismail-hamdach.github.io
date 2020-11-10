@@ -40,7 +40,7 @@ httpReq.onreadystatechange = function(){
         death.innerHTML = deaths[deaths.length-1];
         
         confToday.innerHTML  = "+ "+(confirmed[confirmed.length-1]-confirmed[confirmed.length-2]);
-        activToday.innerHTML = "+ "+(active[active.length-1]-active[active.length-2]);
+        activToday.innerHTML = "+ "+(active[active.length-2]-active[active.length-1]);
         recoToday.innerHTML  = "+ "+(recovered[recovered.length-1]-recovered[recovered.length-2]);
         deathToday.innerHTML = "+ "+(deaths[deaths.length-1]-deaths[deaths.length-2]);  
 
